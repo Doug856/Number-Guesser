@@ -17,28 +17,43 @@ public class JFrame_GUI extends JFrame {
         setSize(new Dimension(400, 400));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
+        setLayout(new GridBagLayout());
+
+        GridBagConstraints gbc = new GridBagConstraints();
+
+
+        addTitleLabel( gbc);
+        addEnterBar(gbc);
+        addEnterBtn(gbc);
+        addGeneratedNumber(gbc);
+        addConfirmLabel(gbc);
+
         setVisible(true);
-
     }
 
-    public void addTitleLabel() {
+    public void addTitleLabel(GridBagConstraints gbc) {
         title = new JLabel("Number Guesser");
+        add(title,gbc);
     }
 
-    public void addEnterBar() {
+    public void addEnterBar(GridBagConstraints gbc) {
         enterBar = new JTextField();
+        add(enterBar,gbc);
     }
 
-    public void addEnterBtn() {
+    public void addEnterBtn(GridBagConstraints gbc) {
         btnEnter = new JButton("Enter");
+        add(btnEnter,gbc);
     }
 
-    public void addGeneratedNumber() {
+    public void addGeneratedNumber(GridBagConstraints gbc) {
         generatedNumber = new JLabel("");
+        add(generatedNumber,gbc);
     }
 
-    public void addConfirmLabel() {
+    public void addConfirmLabel(GridBagConstraints gbc) {
         confirmLabel = new JLabel("");
+        add(confirmLabel,gbc);
     }
 
 
