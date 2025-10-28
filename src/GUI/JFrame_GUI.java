@@ -47,11 +47,11 @@ public class JFrame_GUI extends JFrame {
         gbc.anchor = GridBagConstraints.CENTER;
         gbc.insets = new Insets(10, 10, 10, 10);
 
-        // panel to hold text field + button
         JPanel inputPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 0));
 
         enterBar = new JTextField(15);
-        enterBar.setPreferredSize(new Dimension(250, 45)); // height will now apply
+        enterBar.setPreferredSize(new Dimension(250, 45));
+        enterBar.setText("A Number Between 1-100");
 
         btnEnter = new JButton("Enter");
         btnEnter.setPreferredSize(new Dimension(100, 45));
